@@ -1,0 +1,6 @@
+{
+  messages {
+    id
+    text
+  }
+}

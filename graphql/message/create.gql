@@ -1,0 +1,8 @@
+mutation createMessage($input:String!){
+  createMessage(data:{
+    text:$input
+  }){
+    id
+    text
+  }
+}

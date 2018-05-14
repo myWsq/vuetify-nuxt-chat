@@ -1,0 +1,9 @@
+subscription message{
+  message{
+    mutation
+    node{
+      id
+      text
+    }
+  }
+}
