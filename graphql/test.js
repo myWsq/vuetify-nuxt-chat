@@ -18,14 +18,14 @@ import {
 
 export default (ctx) => {
     const httpLink = new HttpLink({
-        uri: 'http://111.231.68.175:4466',
+        uri: 'https://api.mywsq.cn/database',
     })
 
     // Create a WebSocket link:
     let link = httpLink
     if (process.client) {
         let wsLink = new WebSocketLink({
-            uri: 'ws://111.231.68.175:4466',
+            uri: 'wss://api.mywsq.cn/database',
             options: {
                 reconnect: true
             }
