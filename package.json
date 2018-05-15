@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "DEPLOY_ENV=GH_PAGES nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages"
+    "generate": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": " push-dir --dir=dist --branch=gh-pages"
   },
   "dependencies": {
     "nuxt": "^1.0.0",
