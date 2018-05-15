@@ -32,13 +32,18 @@ export default (ctx) => {
         })
 
         link = split(
-            ({query}) => {
-              const {kind, operation} = getMainDefinition(query)
-              return kind === 'OperationDefinition' && operation === 'subscription'
+            ({
+                query
+            }) => {
+                const {
+                    kind,
+                    operation
+                } = getMainDefinition(query)
+                return kind === 'OperationDefinition' && operation === 'subscription'
             },
             wsLink,
             httpLink
-          )
+        )
     }
 
     // const authMiddleware = new ApolloLink((operation, forward) => {
